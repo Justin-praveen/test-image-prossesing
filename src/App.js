@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import hu from './component/test';
 
 function App() {
   return (
-    <div className="App">
+    <><div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +20,10 @@ function App() {
         </a>
       </header>
     </div>
+    <hu/>
+
+    </>
+    
   );
 }
 
