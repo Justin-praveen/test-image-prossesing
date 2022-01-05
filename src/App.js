@@ -1,27 +1,48 @@
-import logo from './logo.svg';
+
 import './App.css';
-import hu from './component/test';
+
+import {useSelector} from "react-redux";
+import {BrowserRouter,Route,Routes} from "react-router-dom";
+
+import Register from "./login/register";
+import {Admin}  from './Admin/admin';
+import Login from "./login/login";
+import Question from './quise/question';
+
 
 function App() {
-  return (
-    <><div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    <hu/>
 
+  
+let hu;
+  const swe = useSelector((state)=>state.data);
+  if(swe == null){
+    console.log(swe)
+  }else{
+    swe.map((datas)=> (hu=datas.admin));
+    console.log(hu) 
+    
+  }
+  
+  return (
+    <>
+
+    {
+     swe != null && hu === true ? (<Admin/>) : swe != null ?( <BrowserRouter>
+    <Routes>
+      <Route exact path="/" element={<Question/>}/>
+    </Routes>
+    </BrowserRouter>):(<BrowserRouter>
+    <Routes>
+      <Route exact path="/" element={<Login/>}/>
+      <Route path="register" element={<Register/>}/>
+    </Routes>
+    </BrowserRouter>
+   )
+    }
+
+   
+
+    
     </>
     
   );
