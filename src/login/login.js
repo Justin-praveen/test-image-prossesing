@@ -36,6 +36,9 @@ const Login = () => {
         <>
 
         <div>
+        <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
             <div className='container'>
                 <form onSubmit={handleSubmit(async(data)=>{
                     
@@ -60,6 +63,8 @@ const Login = () => {
                         const errorMessage = error.message;
 
                         console.log(`${errorCode && errorMessage}`)
+                        alert(`${errorCode && errorMessage}`)
+                        
                       });
 
                     let ju = document.getElementById("email");
@@ -68,7 +73,10 @@ const Login = () => {
                     ji.value = ""
 
                 })}>
+    
+
                     <div className='row'>
+                
                         <div >
                             <div className='input-field col s12'>
                             

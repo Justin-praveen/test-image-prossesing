@@ -5,8 +5,12 @@ import {useSelector} from "react-redux";
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 
 import Register from "./login/register";
-import {Admin}  from './Admin/admin';
+
 import Login from "./login/login";
+
+
+import Start1 from './quise/Start1'
+import Auth from './Admin/Auth';
 import Question from './quise/question';
 
 
@@ -27,11 +31,15 @@ let hu;
     <>
 
     {
-     swe != null && hu === true ? (<Admin/>) : swe != null ?( <BrowserRouter>
-    <Routes>
-      <Route exact path="/" element={<Question/>}/>
-    </Routes>
-    </BrowserRouter>):(<BrowserRouter>
+     swe != null && hu === true ? (<Auth/>) : swe != null ?(
+//           <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<Start1/>}/>
+      
+//     </Routes>
+// </BrowserRouter>
+<Start1/>
+    ):(<BrowserRouter>
     <Routes>
       <Route exact path="/" element={<Login/>}/>
       <Route path="register" element={<Register/>}/>

@@ -93,7 +93,7 @@ const Register = () => {
             
                             
                             <button className='btn' type='submit' >
-                                login
+                                Signup
                             </button>
                             
                         
