@@ -11,7 +11,7 @@ import Login from "./login/login";
 
 import Start1 from './quise/Start1'
 import Auth from './Admin/Auth';
-import Question from './quise/question';
+
 
 
 function App() {

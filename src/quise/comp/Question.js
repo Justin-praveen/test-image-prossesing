@@ -1,4 +1,5 @@
-import React, { useState,useEffect,useRef } from 'react'
+import React, { useState,useEffect,useRef } from 'react';
+
 
 const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) => {
 
@@ -49,7 +50,7 @@ const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) 
 
 
     return (
-        <div>
+        
             <>
         
             <h1><center>QUISE</center></h1>
@@ -71,10 +72,12 @@ const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) 
            
 
             <button className='btn' onClick={jun}>click</button>
+
+            
             
             </>
             
-        </div>
+        
     )
 }
 

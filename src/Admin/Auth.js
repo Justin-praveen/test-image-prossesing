@@ -3,6 +3,7 @@ import { Admin } from './admin';
 
 import {useForm} from "react-hook-form";
 import axios from 'axios';
+import Adminverify from '../modal/Adminverify';
 
 
 
@@ -59,6 +60,7 @@ if(ui === true){
                 <a className='btn' onClick={ji}>click</a>
             </div>):(<Admin/>)
         }
+        <Adminverify/>
         </>    
     )
 }

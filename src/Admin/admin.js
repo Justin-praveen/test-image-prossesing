@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 import {useForm} from "react-hook-form"
+import Adminpanel from '../modal/Adminpanel';
+
 
 
 
@@ -89,6 +91,7 @@ export const Admin = () => {
                 </form>
             </div>
         </div>
+        <Adminpanel/>
       </>
 
     )
