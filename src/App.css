@@ -39,3 +39,143 @@
 
 
 /* loin ui end */
+
+/* face */
+
+.vid-face{
+  display: flex;
+  justify-content: center;
+}
+.can-face{
+  position: absolute;
+}
+/* face end */
+
+
+/* admin-verify */
+
+.verify-full{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: aqua;
+  height: 100vh;
+  
+}
+.auth-cont{
+
+width: fit-content;
+height: fit-content;
+opacity: 0.8;
+
+  
+}
+
+.verify-auth{
+  box-shadow: white 10px 1px 100px 100px;
+}
+
+.bt-auth{
+  margin: 30px !important;
+}
+
+
+/* admin -verify ends */
+
+/* admin-add */
+
+.admin-bg{
+  background-color: aliceblue;
+  
+  
+  box-shadow: whitesmoke 3px 3px 30px 10px;
+}
+
+
+
+
+
+
+/* admin-add- ends */
+
+/* start */
+
+.whole{
+  display :flex;
+  height :100vh;
+  justify-content: center;
+  align-items: center;
+}
+.sixer{
+  width: max-content ;
+  padding: 70px;
+  border-radius: 15%;
+  box-shadow: whitesmoke 3px 3px 50px 10px;
+}
+
+/* start ends */
+/* face */
+
+.face-full{
+  height: fit-content !important;
+}
+body{
+  background-color: rgb(47, 46, 46);
+}
+/* face end */
+
+/* quisw */
+
+.align-io{
+ 
+  text-align: start !important;
+  border-radius: black 10% !important;
+  
+  background-color: whitesmoke !important;
+}
+
+
+
+.wh{
+  color : white !important;
+}
+
+.eit{
+  border-radius: 20px !important;
+  box-shadow: gray 3px 3px 40px 3px;
+}
+
+/* quise end */
+/* result */
+
+
+
+.ff-gg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px !important;
+}
+
+.ff-ii{
+  padding: 40px !important;
+  margin: 20px;
+  border-radius: 15%;
+  box-shadow: whitesmoke 3px 3px 40px 3px;
+}
+
+.jj-ui{
+  padding-left: 10px !important;
+}
+
+.jy{
+  display: flex;
+  justify-content: space-between !important;
+
+}
+/* result end */
+
+
+

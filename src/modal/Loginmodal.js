@@ -13,7 +13,7 @@ const Loginmodal = () => {
 <div>
      
       <Modal open={open} onClose={hu} center>
-        <h2>Sucessfully loged!</h2>
+      <h4>SUCCESSFULY....</h4>
         
       </Modal>
     </div>

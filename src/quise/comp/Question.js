@@ -1,6 +1,7 @@
 import React, { useState,useEffect,useRef } from 'react';
 
 
+
 const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) => {
 
     const[ans,setans]=useState("");
@@ -14,7 +15,7 @@ const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) 
         if(findCheckedInput) {
           findCheckedInput.checked = false;
         }
-      }, [data]);
+      });
 
 
     const just = (e)=>{
@@ -30,7 +31,7 @@ const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) 
     const jun = ()=>{
 
         if(ans === ""){
-           return seterrors("nothing will selected")
+           return seterrors("Pleace select")
         }
         
             setanswer(prevState => [...prevState, { q: data.question, a: ans }])
@@ -52,26 +53,55 @@ const Question = ({stages ,data ,qlenth,aquestion,upquestion,setanswer,answer}) 
     return (
         
             <>
-        
-            <h1><center>QUISE</center></h1>
+            <div className='q-full'>
+              <div className='container'>
+              <div className='card center-align  eit blue-grey darken-4'>
+<h4 className='wh'>{data.question}</h4>
+<div className='row align-content-center'>
 
-            <h1>{data.question}</h1>
-            <div  ref={radiosWrapper}>
+  <div className='col s12 align-io'>
+ <div  ref={radiosWrapper}>
             {data.choices.map((choice, i) => (
               <p> <label  key={i}>
-                <input type="radio" name="group1"  value={choice} onChange={just} />
+                <input type="radio" name="group1" className='black-text bg-danger' value={choice} onChange={just} />
                <span>{choice}</span> 
               </label></p>
              
             ))}
           </div>
-            {errors && <h1>{errors}</h1>}
+            
+
+
+  </div>
+
+</div>
+{errors && <h5>{errors}</h5>}
+<div className='row'>
+  <div className='col s12'>
+     <button className='btn' onClick={jun}>click</button>
+  </div>
+</div>
+
+
+
+                </div>
+            </div>
+
+            
+        
+            
+
+            
+           
 
 
             
            
 
-            <button className='btn' onClick={jun}>click</button>
+            
+
+            
+            </div>
 
             
             

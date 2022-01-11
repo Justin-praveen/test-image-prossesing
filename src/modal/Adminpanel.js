@@ -14,7 +14,7 @@ const Adminpanel = () => {
 <div>
      
      <Modal open={open} onClose={hu} center>
-       <h2>Sucessfully loged!</h2>
+       <h2>WELCOME ADMIN!</h2>
        
      </Modal>
    </div>

@@ -13,7 +13,7 @@ export const Admin = () => {
     return (
       <>
       <div>
-            <div className='container'>
+            <div className='container admin-bg'>
                 <form onSubmit={handleSubmit(async(data)=>{
 
                   
@@ -25,6 +25,9 @@ export const Admin = () => {
                   }).then((data)=>{
                     console.log(data)
                     alert("data added sucessfuly")
+                  }).catch((error)=>{
+                      alert("something went wrong!")
+
                   })
 
                     
@@ -79,10 +82,15 @@ export const Admin = () => {
                         </div>
                             
             
-                            
-                            <button className='btn' type='submit' >
+                            <div className='row'>
+                                <div className='col s4 offset-s5 '>
+<button className='btn center-align' type='submit' >
                                 Submit
                             </button>
+                                </div>
+                                
+                            </div>
+                            
                             
                         
                             
