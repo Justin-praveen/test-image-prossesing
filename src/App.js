@@ -1,8 +1,8 @@
 
 import './App.css';
 
-import {useSelector} from "react-redux";
-import {BrowserRouter,Route,Routes} from "react-router-dom";
+import { useSelector } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Register from "./login/register";
 
@@ -16,43 +16,43 @@ import Auth from './Admin/Auth';
 
 function App() {
 
-  
-let hu;
-  const swe = useSelector((state)=>state.data);
-  if(swe == null){
+
+  let hu;
+  const swe = useSelector((state) => state.data);
+  if (swe == null) {
     console.log(swe)
-  }else{
-    swe.map((datas)=> (hu=datas.admin));
-    console.log(hu) 
-    
+  } else {
+    swe.map((datas) => (hu = datas.admin));
+    console.log(hu)
+
   }
-  
+
   return (
     <>
 
-    {
-     swe != null && hu === true ? (<Auth/>) : swe != null ?(
-//           <BrowserRouter>
-//     <Routes>
-//       <Route path="/" element={<Start1/>}/>
-      
-//     </Routes>
-// </BrowserRouter>
-<Start1/>
-    ):(<BrowserRouter>
-    <Routes>
-      <Route exact path="/" element={<Login/>}/>
-      <Route path="register" element={<Register/>}/>
-    </Routes>
-    </BrowserRouter>
-   )
-    }
+      {
+        swe != null && hu === true ? (<Auth />) : swe != null ? (
+          //           <BrowserRouter>
+          //     <Routes>
+          //       <Route path="/" element={<Start1/>}/>
 
-   
+          //     </Routes>
+          // </BrowserRouter>
+          <Start1 />
+        ) : (<BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Routes>
+        </BrowserRouter>
+        )
+      }
 
-    
+
+
+
     </>
-    
+
   );
 }
 

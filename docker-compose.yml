@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  frontend-service:
+    container_name: justin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: justin
+    ports:
+      - 3000:80
+    volumes:
+      - ./:/app
